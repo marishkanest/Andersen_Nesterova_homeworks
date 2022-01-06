@@ -8,6 +8,7 @@
     <artifactId>Homeworks1and2-maven</artifactId>
     <version>0.1</version>
 
+<!--    А почему JAVA 8??? 11 хотя бы -->
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
