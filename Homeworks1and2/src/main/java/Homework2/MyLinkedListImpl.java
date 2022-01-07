@@ -104,7 +104,9 @@ public class MyLinkedListImpl<T extends Comparable<T>> implements MyLinkedList<T
         return Arrays.toString(result);
     }
 
+
     // Метод реализующий пузырьковую сортировку
+
     @Override
     public void sort() {
         Node current = first, index = null;
