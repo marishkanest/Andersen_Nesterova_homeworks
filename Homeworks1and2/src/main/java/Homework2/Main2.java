@@ -14,13 +14,8 @@ public class Main2 {
         list.add(3);
 
         System.out.println("До сортировки: " + list.toString());
-
-
-
-
-
-
-
+        list.sort();
+        System.out.println("После сортировки: " + list.toString());
 
         list.remove(8);
         list.remove ( 17);
