@@ -2,7 +2,7 @@ package Homework2;
 
 import java.util.Arrays;
 
-public class MyLinkedListImpl<T> implements MyLinkedList<T> {
+public class MyLinkedListImpl<T extends Comparable<T>> implements MyLinkedList<T> {
 
     private static class Node {
 
@@ -73,11 +73,6 @@ public class MyLinkedListImpl<T> implements MyLinkedList<T> {
         }
     }
 
-    @Override
-    public void sort() {
-
-    }
-
     public Object get(int index) {
         int currentIndex = 0;
         Node temp = first;
@@ -108,7 +103,8 @@ public class MyLinkedListImpl<T> implements MyLinkedList<T> {
         return Arrays.toString(result);
     }
 
-/*    public void sortList() {
+    @Override
+    public void sort() {
         Node current = first, index = null;
         Object temp;
         if (first == null) {
@@ -117,7 +113,7 @@ public class MyLinkedListImpl<T> implements MyLinkedList<T> {
             while (current != null) {
                 index = current.next;
                 while (index != null) {
-                    if ( current.value > index.value) {
+                    if (((T) current.value).compareTo((T)(index.value)) > 0) {
                         temp = current.value;
                         current.value = index.value;
                         index.value = temp;
@@ -127,6 +123,6 @@ public class MyLinkedListImpl<T> implements MyLinkedList<T> {
                 current = current.next;
             }
         }
-    }*/
+    }
 
 }
