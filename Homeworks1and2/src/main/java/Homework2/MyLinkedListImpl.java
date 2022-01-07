@@ -1,15 +1,33 @@
 package Homework2;
 
+import java.util.Arrays;
+
 public class MyLinkedListImpl<T> implements MyLinkedList<T> {
 
     private static class Node {
 
 
-        Object value;
-        Node next;
+        private Object value;
+        private Node next;
 
         public <T> Node(Object value) {
-            this.value =  value;
+            this.value = value;
+        }
+
+        public Object getValue() {
+            return value;
+        }
+
+        public void setValue(Object value) {
+            this.value = value;
+        }
+
+        public Node getNext() {
+            return next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
         }
     }
 
@@ -59,4 +77,56 @@ public class MyLinkedListImpl<T> implements MyLinkedList<T> {
     public void sort() {
 
     }
+
+    public Object get(int index) {
+        int currentIndex = 0;
+        Node temp = first;
+
+        while (temp != null) {
+            if(currentIndex == index) {
+                return temp.getValue();
+            } else {
+                temp = temp.getNext();
+                currentIndex++;
+            }
+        }
+
+        throw new IllegalArgumentException();
+    }
+
+    public String toString() {
+        Object[] result = new Object[size];
+
+        int idx = 0;
+        Node temp = first;
+
+        while (temp != null) {
+            result[idx++] = temp.getValue();
+            temp = temp.getNext();
+        }
+
+        return Arrays.toString(result);
+    }
+
+/*    public void sortList() {
+        Node current = first, index = null;
+        Object temp;
+        if (first == null) {
+            return;
+        } else {
+            while (current != null) {
+                index = current.next;
+                while (index != null) {
+                    if ( current.value > index.value) {
+                        temp = current.value;
+                        current.value = index.value;
+                        index.value = temp;
+                    }
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
+    }*/
+
 }
