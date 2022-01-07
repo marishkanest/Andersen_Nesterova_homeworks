@@ -89,6 +89,7 @@ public class MyLinkedListImpl<T extends Comparable<T>> implements MyLinkedList<T
         throw new IllegalArgumentException();
     }
 
+    // Метод, выводящий список на экран
     public String toString() {
         Object[] result = new Object[size];
 
@@ -102,6 +103,9 @@ public class MyLinkedListImpl<T extends Comparable<T>> implements MyLinkedList<T
 
         return Arrays.toString(result);
     }
+
+
+    // Метод реализующий пузырьковую сортировку
 
     @Override
     public void sort() {
