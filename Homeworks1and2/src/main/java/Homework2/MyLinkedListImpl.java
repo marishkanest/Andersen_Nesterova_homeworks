@@ -1,5 +1,5 @@
 package Homework2;
-//ghbdtndfdkjdfdf
+
 import java.util.Arrays;
 
 public class MyLinkedListImpl<T extends Comparable<T>> implements MyLinkedList<T> {
