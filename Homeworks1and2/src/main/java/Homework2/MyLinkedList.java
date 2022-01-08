@@ -8,4 +8,8 @@ public interface MyLinkedList<T> {
     void remove(T t);
 
     void sort();
+
+    Object get(int index);
+
+    String toString();
 }
