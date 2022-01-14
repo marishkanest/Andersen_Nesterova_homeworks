@@ -1,7 +1,5 @@
 package Homework3.MarinaPattern;
 
-import Homework3.MarinaPattern.User;
-
 public class Main {
 
     public static void main(String[] args) {
