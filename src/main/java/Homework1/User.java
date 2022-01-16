@@ -3,11 +3,11 @@ package Homework1;
 import java.util.StringJoiner;
 
 public class User implements Comparable<User> {
-    private Long id;
-    private String firstName;
-    private String lastName;
-    private int age;
-    private double height;
+    private final Long id;
+    private final String firstName;
+    private final String lastName;
+    private final int age;
+    private final double height;
 
     public User(Long id, String firstName, String lastName, int age, double height) {
         this.id = id;
@@ -17,25 +17,25 @@ public class User implements Comparable<User> {
         this.height = height;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public double getHeight() {
-        return height;
-    }
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public String getFirstName() {
+//        return firstName;
+//    }
+//
+//    public String getLastName() {
+//        return lastName;
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public double getHeight() {
+//        return height;
+//    }
 
     @Override
     public String toString() {
