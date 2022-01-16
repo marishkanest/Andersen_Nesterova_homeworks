@@ -35,12 +35,12 @@ public class MyLinkedListImpl<T extends Comparable<T>> implements MyLinkedList<T
     private Node last;
     private int size;
 
-
+//возвращает количество  элементов
     @Override
     public int size() {
         return size;
     }
-
+//Добавляет указанный элемент в конец списка
     @Override
     public void add(T t) {
         Node newNode = new Node(t);
@@ -53,7 +53,7 @@ public class MyLinkedListImpl<T extends Comparable<T>> implements MyLinkedList<T
         }
         size++;
     }
-
+//Удаляет указанный элемент
     @Override
     public void remove(T t) {
         for (Node current = first, prev = null; current != null; prev = current, current = current.next) {
@@ -72,7 +72,7 @@ public class MyLinkedListImpl<T extends Comparable<T>> implements MyLinkedList<T
             }
         }
     }
-
+//возвращает значение элемента по индексу
     public Object get(int index) {
         int currentIndex = 0;
         Node temp = first;
