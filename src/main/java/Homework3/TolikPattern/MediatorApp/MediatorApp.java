@@ -1,4 +1,4 @@
-package Homework3.TolikPattern;
+package Homework3.TolikPattern.MediatorApp;
 
 import java.util.ArrayList;
 import java.util.List;

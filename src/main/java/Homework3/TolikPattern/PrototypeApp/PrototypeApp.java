@@ -1,4 +1,4 @@
-package Homework3.TolikPattern;
+package Homework3.TolikPattern.PrototypeApp;
 
 
 public class PrototypeApp {
@@ -34,8 +34,7 @@ class Human implements Copyable /*Cloneable*/{
                 '}';
     }
     public Object copy(){
-        Human clonn = new Human(age,name);
-        return clonn;
+        return new Human(age,name);
     }
 }
 

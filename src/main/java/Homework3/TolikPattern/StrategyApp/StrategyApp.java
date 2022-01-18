@@ -1,4 +1,4 @@
-package Homework3.TolikPattern;
+package Homework3.TolikPattern.StrategyApp;
 
 
 import java.util.Arrays;
