@@ -77,12 +77,12 @@ public class Randomi {
         list.add(st33);
 
 
-        Vybor(list);  //метод делает рандом
+        vybor(list);  //метод делает рандом
 
 
     }
 
-    private static void Vybor(List<Student> source) {
+    private static void vybor(List<Student> source) {
         //для первого студента
         Random student1 = new SecureRandom();
         int studentIndex = student1.nextInt(source.size());
