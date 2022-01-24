@@ -76,13 +76,15 @@ public class Randomi {
         Student st33 = new Student(12, "Детский Ярослав");
         list.add(st33);
 
+        Randomi stud = new Randomi();
 
-        vybor(list);  //метод делает рандом
+        stud.vybor(list);
+
 
 
     }
 
-    private static void vybor(List<Student> source) {
+    private void vybor(List<Student> source) {
         //для первого студента
         Random student1 = new SecureRandom();
         int studentIndex = student1.nextInt(source.size());
