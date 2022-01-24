@@ -78,12 +78,13 @@ public class Randomi {
 
         Randomi stud = new Randomi();
 
-        while(list.size()>=2) {
+        while(list.size()>1) {
             Scanner sc = new Scanner(System.in);
             System.out.println("Нжамите ввод ");
             String phrase1 = sc.nextLine();
             stud.vybor(list);
         }
+        System.out.println("Остался " + list.size() +" "+ list.get(0));
 
     }
 
@@ -100,8 +101,8 @@ public class Randomi {
         Student studentElement2 = source.get(studentIndex2);
         if(studentElement2.team!=studentElement.team){
             System.out.println("Отвечает: " + studentElement2);
-//            source.remove(studentIndex);
-//            source.remove(studentIndex2);
+            source.remove(studentElement);
+            source.remove(studentElement2);
         }else {
             System.out.println("Отвечает: " + studentElement2 + " Люди из одной команды. Сделать еще раз Рандом");
         }
